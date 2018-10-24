@@ -16,6 +16,7 @@ var app = express();
 var databaseUrl = 'mongodb://best-for-you-db-oc:u7hExOt1Qx9FF8GNYXVP1TWpZQNlrk2tWlT9gS9Uu4PXmtNlollKgQhAwgAwF7FXqNgkk86yTKcZnBYFFO03Dw==@best-for-you-db-oc.documents.azure.com:10255/best-for-you-organics?ssl=true&replicaSet=globaldb';
 
 var mongoose = require('mongoose');
+
 mongoose.Promise = require('bluebird');
 mongoose.connect(databaseUrl, { useMongoClient: true, promiseLibrary: require('bluebird') })
   .then(() => console.log('connection succesful'))
